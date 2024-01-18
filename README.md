@@ -36,7 +36,7 @@ devtools::install_github("AGImkeller/scaeData", build_vignettes = TRUE)
 
 ## About
 
-Please see [scIGD](https://github.com/AGImkeller/scIGD) and [SingleCellAlleleExperiment](https://github.com/AGImkeller/SingleCellAlleleExperiment) for more details.
+Please consult [scIGD](https://github.com/AGImkeller/scIGD) and [SingleCellAlleleExperiment](https://github.com/AGImkeller/SingleCellAlleleExperiment) documentations for more details.
 
 ## Bugs and issues
 
