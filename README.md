@@ -43,3 +43,7 @@ Please consult [scIGD](https://github.com/AGImkeller/scIGD) and [SingleCellAllel
 Please report any bugs and/or issues to the [scIGD Issues page](https://github.com/AGImkeller/scIGD/issues)
 
 ## Citation
+
+## Authors: 
+
+- [Ahmad Al Ajami](https://github.com/ahmadalajami), [Jonas Schuck](https://github.com/Jonas-Schuck), [Federico Marini](https://github.com/federicomarini), [Katharina Imkeller](https://github.com/imkeller)
