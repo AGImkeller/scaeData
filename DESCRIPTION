@@ -2,7 +2,7 @@ Package: scaeData
 Type: Package
 Title: Data Package for SingleCellAlleleExperiment
 Version: 0.0.0.9000
-Date: 2024-17-01
+Date: 2024-15-01
 Authors@R: 
     c(
     person("Ahmad", "Al Ajami", , "alajami@med.uni-frankfurt.de", role = c("aut", "cre")),
