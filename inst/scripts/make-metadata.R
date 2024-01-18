@@ -158,10 +158,31 @@ pbmc_20k_count_mtx <- c("pbmc_20k_count_mtx.mtx",
                         "MTX",
                         "scaeData/pbmc_20k_count_mtx.mtx")
 
+## HLA lookup table
+
+hla_lookup_table <- c("hla_lookup_table.csv",
+                      "Database providing information about MHC class molecules",
+                      "3.18",
+                      "NA",
+                      "CSV",
+                      "https://www.ebi.ac.uk/ipd/imgt/hla",
+                      "15 January 2024",
+                      "Homo sapiens",
+                      "9606",
+                      "NA",
+                      "Barker, D. J., Maccari, G., Georgiou, X., Cooper, M. A., Flicek, P., Robinson, J., & Marsh, S. G. E. (2023). The IPD-IMGT/HLA Database. Nucleic Acids Research, 51 (D1), D1053–D1060",
+                      "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
+                      "data.frame",
+                      "CSV",
+                      "scaeData/hla_lookup_table.csv")
+
+## -----------------------------------------------------------------------------
+
 metadata <- rbind(metadata,
                   pbmc_5k_barcodes, pbmc_5k_features, pbmc_5k_count_mtx,
                   pbmc_10k_barcodes, pbmc_10k_features, pbmc_10k_count_mtx,
                   pbmc_20k_barcodes, pbmc_20k_features, pbmc_20k_count_mtx,
+                  hla_lookup_table,
                   stringsAsFactors=FALSE)
 
 colnames(metadata) <- c("Title",
