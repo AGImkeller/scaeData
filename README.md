@@ -44,6 +44,6 @@ Please report any bugs and/or issues to the [scIGD Issues page](https://github.c
 
 ## Citation
 
-## Authors: 
+## Authors
 
 - [Ahmad Al Ajami](https://github.com/ahmadalajami), [Jonas Schuck](https://github.com/Jonas-Schuck), [Federico Marini](https://github.com/federicomarini), [Katharina Imkeller](https://github.com/imkeller)
