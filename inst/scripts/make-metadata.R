@@ -12,10 +12,10 @@ pbmc_5k_barcodes <- c("pbmc_5k_barcodes.txt",
                       "Homo sapiens",
                       "9606",
                       "NA",
-                      "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
+                      "10x Genomics",
                       "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
                       "data.frame",
-                      "TXT",
+                      "data.frame",
                       "scaeData/pbmc_5k_barcodes.txt"
                       )
 
@@ -29,10 +29,10 @@ pbmc_5k_features <- c("pbmc_5k_features.txt",
                       "Homo sapiens",
                       "9606",
                       "NA",
-                      "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
+                      "10x Genomics",
                       "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
                       "data.frame",
-                      "TXT",
+                      "data.frame",
                       "scaeData/pbmc_5k_features.txt"
                       )
 
@@ -46,10 +46,10 @@ pbmc_5k_count_mtx <- c("pbmc_5k_count_mtx.mtx",
                        "Homo sapiens",
                        "9606",
                        "NA",
-                       "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
+                       "10x Genomics",
                        "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
                        "sparseMatrix",
-                       "MTX",
+                       "sparseMatrix",
                        "scaeData/pbmc_5k_count_mtx.mtx"
                        )
 
@@ -65,10 +65,10 @@ pbmc_10k_barcodes <- c("pbmc_10k_barcodes.txt",
                        "Homo sapiens",
                        "9606",
                        "NA",
-                       "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
+                       "10x Genomics",
                        "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
                        "data.frame",
-                       "TXT",
+                       "data.frame",
                        "scaeData/pbmc_10k_barcodes.txt"
                        )
 
@@ -82,10 +82,10 @@ pbmc_10k_features <- c("pbmc_10k_features.txt",
                        "Homo sapiens",
                        "9606",
                        "NA",
-                       "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
+                       "10x Genomics",
                        "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
                        "data.frame",
-                       "TXT",
+                       "data.frame",
                        "scaeData/pbmc_10k_features.txt"
                        )
 
@@ -99,10 +99,10 @@ pbmc_10k_count_mtx <- c("pbmc_10k_count_mtx.mtx",
                        "Homo sapiens",
                        "9606",
                        "NA",
-                       "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
+                       "10x Genomics",
                        "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
                        "sparseMatrix",
-                       "MTX",
+                       "sparseMatrix",
                        "scaeData/pbmc_10k_count_mtx.mtx"
                        )
 
@@ -118,10 +118,10 @@ pbmc_20k_barcodes <- c("pbmc_20k_barcodes.txt",
                        "Homo sapiens",
                        "9606",
                        "NA",
-                       "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
+                       "10x Genomics",
                        "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
                        "data.frame",
-                       "TXT",
+                       "data.frame",
                        "scaeData/pbmc_20k_barcodes.txt"
                        )
 
@@ -135,10 +135,10 @@ pbmc_20k_features <- c("pbmc_20k_features.txt",
                        "Homo sapiens",
                        "9606",
                        "NA",
-                       "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
+                       "10x Genomics",
                        "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
                        "data.frame",
-                       "TXT",
+                       "data.frame",
                        "scaeData/pbmc_20k_features.txt"
                        )
 
@@ -152,10 +152,10 @@ pbmc_20k_count_mtx <- c("pbmc_20k_count_mtx.mtx",
                         "Homo sapiens",
                         "9606",
                         "NA",
-                        "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
+                        "10x Genomics",
                         "Ahmad Al Ajami <alajami@med.uni-frankfurt.de>",
                         "sparseMatrix",
-                        "MTX",
+                        "sparseMatrix",
                         "scaeData/pbmc_20k_count_mtx.mtx")
 
 ## -----------------------------------------------------------------------------
@@ -186,4 +186,4 @@ colnames(metadata) <- c("Title",
 metadata$BiocVersion <- as.numeric(metadata$BiocVersion)
 metadata$TaxonomyId <- as.numeric(metadata$TaxonomyId)
 
-write.csv(metadata, file = "inst/extdata/metadata.csv", row.names = FALSE)
+write.csv(metadata, file = "../extdata/metadata.csv", row.names = FALSE)
