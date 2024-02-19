@@ -18,7 +18,8 @@ Description:  Contains default datasets used by the Bioconductor package SingleC
 Depends:  R (>= 4.3.0),
           ExperimentHub
 Imports:  AnnotationHub,
-          utils
+          utils,
+          Matrix
 Suggests: knitr,
           rmarkdown,
           markdown,
