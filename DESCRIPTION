@@ -24,7 +24,7 @@ Suggests: knitr,
           rmarkdown,
           markdown,
           BiocStyle
-biocViews: ExperimentHub, ExperimentData, Homo_sapiens_Data, SingleCell, Transcriptomics
+biocViews: ExperimentHub, ExperimentData, Homo_sapiens_Data, SingleCellData
 License: MIT + file LICENSE
 VignetteBuilder: knitr
 Encoding: UTF-8
