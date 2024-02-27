@@ -5,9 +5,9 @@ Version: 0.0.0.9000
 Date: 2024-15-01
 Authors@R: 
     c(
-    person("Ahmad", "Al Ajami", , "alajami@med.uni-frankfurt.de", role = c("aut", "cre")),
+    person("Ahmad", "Al Ajami", "alajami@med.uni-frankfurt.de", role = c("aut", "cre")),
     person("Jonas", "Schuck", "schuck@med.uni-frankfurt.de", role = c("aut")),
-    person("Federico", "Marini", "marinif@uni-mainz.de", role = c("aut"))
+    person("Federico", "Marini", "marinif@uni-mainz.de", role = c("aut")),
     person("Katharina", "Imkeller", "imkeller@med.uni-frankfurt.de", role = c("aut"))
     )
 Maintainer: "Ahmad Al Ajami" <alajami@med.uni-frankfurt.de>
