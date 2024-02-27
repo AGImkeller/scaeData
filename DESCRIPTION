@@ -5,10 +5,10 @@ Version: 0.0.0.9000
 Date: 2024-15-01
 Authors@R: 
     c(
-    person("Ahmad", "Al Ajami", "alajami@med.uni-frankfurt.de", role = c("aut", "cre")),
-    person("Jonas", "Schuck", "schuck@med.uni-frankfurt.de", role = c("aut")),
-    person("Federico", "Marini", "marinif@uni-mainz.de", role = c("aut")),
-    person("Katharina", "Imkeller", "imkeller@med.uni-frankfurt.de", role = c("aut"))
+    person(given = "Ahmad", family = "Al Ajami", email = "alajami@med.uni-frankfurt.de", role = c("aut", "cre")),
+    person(given = "Jonas", family = "Schuck", email = "schuck@med.uni-frankfurt.de", role = c("aut")),
+    person(given = "Federico", family = "Marini", email = "marinif@uni-mainz.de", role = c("aut")),
+    person(given = "Katharina", family = "Imkeller", email = "imkeller@med.uni-frankfurt.de", role = c("aut"))
     )
 Maintainer: "Ahmad Al Ajami" <alajami@med.uni-frankfurt.de>
 Description:  Contains default datasets used by the Bioconductor package SingleCellAlleleExperiment.
