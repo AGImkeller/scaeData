@@ -17,5 +17,5 @@ ehub_out(bc_dir, feature_dir, mtx_dir)
 list with four elements containing file path to the directory containing all files and each file name for barcodes, features and matrix
 }
 \description{
-Internal function used by \code{scae_data()} to build a list containing the file path
+Internal function used by \code{scaeDataGet()} to build a list containing the file path
 }
