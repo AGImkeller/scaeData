@@ -20,7 +20,8 @@ Imports: ExperimentHub
 Suggests: knitr,
           rmarkdown,
           markdown,
-          BiocStyle
+          BiocStyle,
+          SingleCellAlleleExperiment
 biocViews: ExperimentHub, ExperimentData, Homo_sapiens_Data, SingleCellData
 License: MIT + file LICENSE
 VignetteBuilder: knitr
