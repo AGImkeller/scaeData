@@ -54,7 +54,7 @@ The datasets within `scaeData` are accessible using the `scaeDataGet` function:
 ```{r libraries, include=TRUE, message=FALSE, cache = FALSE}
 suppressPackageStartupMessages({
 library(scaeData)
-library(SingleCellAlleleExperiment)
+# library(SingleCellAlleleExperiment)
 })
 ```
 
@@ -66,9 +66,14 @@ pbmc_20k <- scaeDataGet("pbmc_20k")
 pbmc_20k
 ```
 
+```{r}
+# TODO chunks for "showing the data a bit more"
+```
+
+
 A `SingleCellAlleleExperiment` object, scae for short, can be generated using the `read_allele_counts` function:
 
-```{r}
+```{r, eval = FALSE}
 scae_20k <- read_allele_counts(pbmc_20k$dir,
                                sample_names = "example_data",
                                filter = "yes",
