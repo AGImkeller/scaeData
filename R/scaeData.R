@@ -239,6 +239,6 @@ scaeDataGet <- function(dataset = c("pbmc_5k", "pbmc_10k", "pbmc_20k")){
                      "pbmc_5k"  = ehub_out(get_barcodes_5k(), get_features_5k(), get_counts_5k()),
                      "pbmc_10k" = ehub_out(get_barcodes_10k(), get_features_10k(), get_counts_10k()),
                      "pbmc_20k" = ehub_out(get_barcodes_20k(), get_features_20k(), get_counts_20k()),
-                     print(message("The dataset is unavailable. Please check for any typos.")))
+                     message("The dataset is unavailable. Please check for any typos."))
   return(data_loc)
 }
