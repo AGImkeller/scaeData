@@ -2,8 +2,7 @@
 title: "scaeData User Guide"
 date: "`r format(Sys.time(), '%d %b %Y')`"
 output:
-  html_document:
-    highlight: pygments
+  BiocStyle::html_document:
     toc_float: true
     fig_width: 8
     fig_height: 6
