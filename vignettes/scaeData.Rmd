@@ -2,8 +2,7 @@
 title: "scaeData User Guide"
 date: "`r format(Sys.time(), '%d %b %Y')`"
 output:
-  html_document:
-    highlight: pygments
+  BiocStyle::html_document:
     toc_float: true
     fig_width: 8
     fig_height: 6
@@ -51,10 +50,10 @@ devtools::install_github("AGImkeller/scaeData", build_vignettes = TRUE)
 
 The datasets within `scaeData` are accessible using the `scaeDataGet` function:
 
-```{r libraries, include=TRUE, message=FALSE, cache = FALSE}
+```{r libraries, include=TRUE}
 suppressPackageStartupMessages({
-library(scaeData)
-library(SingleCellAlleleExperiment)
+  library(scaeData)
+  # library(SingleCellAlleleExperiment)
 })
 ```
 
@@ -66,9 +65,14 @@ pbmc_20k <- scaeDataGet("pbmc_20k")
 pbmc_20k
 ```
 
-A `SingleCellAlleleExperiment` object, scae for short, can be generated using the `read_allele_counts` function:
-
 ```{r}
+# TODO chunks for "showing the data a bit more"
+```
+
+
+A `SingleCellAlleleExperiment` object, `scae` for short, can be generated using the `read_allele_counts()` function:
+
+```{r, eval = FALSE}
 scae_20k <- read_allele_counts(pbmc_20k$dir,
                                sample_names = "example_data",
                                filter = "yes",
@@ -82,8 +86,8 @@ scae_20k <- read_allele_counts(pbmc_20k$dir,
 scae_20k
 ```
 
-# Session
+# Session info {-}
 
-```{r sessionInfo, cache = 0}
+```{r sessionInfo}
 sessionInfo()
 ```
