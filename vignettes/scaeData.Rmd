@@ -22,7 +22,7 @@ vignette: >
 
 The raw FASTQs for all three datasets were sourced from publicly accessible datasets provided by [10x Genomics](https://www.10xgenomics.com/datasets).
 
-Upon downloading, [scIGD](https://github.com/AGImkeller/scIGD) Snakemake workflow was utilized to generate allele-specific quantification from scRNA-seq data using donor-specific references.
+Upon downloading, [scIGD](https://github.com/AGImkeller/scIGD) Snakemake workflow was utilized to perform HLA allele-typing processes and generate allele-specific quantification from scRNA-seq data using donor-specific references.
 
 # Quick Start
 
@@ -65,19 +65,32 @@ pbmc_20k <- scaeDataGet("pbmc_20k")
 pbmc_20k
 ```
 
+For example, we can view pbmc 20k:
+
 ```{r}
-# TODO chunks for "showing the data a bit more"
+cells.dir <- file.path(pbmc_20k$dir, pbmc_20k$barcodes)
+features.dir <- file.path(pbmc_20k$dir, pbmc_20k$features)
+mat.dir <- file.path(pbmc_20k$dir, pbmc_20k$matrix)
+
+cells <- utils::read.csv(cells.dir, sep = "", header = FALSE)
+features <- utils::read.delim(features.dir, header = FALSE)
+mat <- Matrix::readMM(mat.dir)
+
+rownames(mat) <- cells$V1
+colnames(mat) <- features$V1
+head(mat)
 ```
 
+A `SingleCellAlleleExperiment` object, `scae` for short, can be generated using the `read_allele_counts()` function retrieved from the `SingleCellAlleleExperiment` package.
 
-A `SingleCellAlleleExperiment` object, `scae` for short, can be generated using the `read_allele_counts()` function:
+A lookup table corresponding to each dataset, facilitating the creation of relevant additional data layers during object generation, can be downloaded from the [GitHub repo] (https://github.com/AGImkeller/scaeData/tree/main/inst/extdata):
 
 ```{r, eval = FALSE}
 scae_20k <- read_allele_counts(pbmc_20k$dir,
                                sample_names = "example_data",
                                filter = "yes",
                                exp_type = "WTA",
-                               lookup_file = "lookup_table_HLA_only.csv",
+                               lookup_file = "pbmc_20k_lookup_table.csv",
                                barcode_file = pbmc_20k$barcodes,
                                gene_file = pbmc_20k$features,
                                matrix_file = pbmc_20k$matrix,
