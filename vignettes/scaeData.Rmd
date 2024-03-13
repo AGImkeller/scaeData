@@ -4,13 +4,15 @@ title: >
 author:
 - name: Ahmad Al Ajami
   affiliation: 
-  - add_yours
-  - second one, if needed
+  - Goethe University, University Hospital Frankfurt, Neurological Institute (Edinger Institute), Frankfurt/Main
+  - University Cancer Center, Frankfurt/Main
+  - Frankfurt Cancer Institute, Frankfurt/Main
   email: alajami@med.uni-frankfurt.de
 - name: Jonas Schuck
   affiliation: 
-  - add_yours
-  - second one, if needed
+  - Goethe University, University Hospital Frankfurt, Neurological Institute (Edinger Institute), Frankfurt/Main
+  - University Cancer Center, Frankfurt/Main
+  - Frankfurt Cancer Institute, Frankfurt/Main
   email: schuck@med.uni-frankfurt.de
 - name: Federico Marini
   affiliation: 
@@ -19,8 +21,9 @@ author:
   email: marinif@uni-mainz.de
 - name: Katharina Imkeller
   affiliation: 
-  - add_yours
-  - second one, if needed
+  - Goethe University, University Hospital Frankfurt, Neurological Institute (Edinger Institute), Frankfurt/Main
+  - University Cancer Center, Frankfurt/Main
+  - Frankfurt Cancer Institute, Frankfurt/Main
   email: imkeller@med.uni-frankfurt.de
 date: "`r BiocStyle::doc_date()`"
 package: "`r BiocStyle::pkg_ver('scaeData')`"
