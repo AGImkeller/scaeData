@@ -1,6 +1,29 @@
 ---
-title: "scaeData User Guide"
-date: "`r format(Sys.time(), '%d %b %Y')`"
+title: >
+  scaeData User Guide
+author:
+- name: Ahmad Al Ajami
+  affiliation: 
+  - add_yours
+  - second one, if needed
+  email: alajami@med.uni-frankfurt.de
+- name: Jonas Schuck
+  affiliation: 
+  - add_yours
+  - second one, if needed
+  email: schuck@med.uni-frankfurt.de
+- name: Federico Marini
+  affiliation: 
+  - Institute of Medical Biostatistics, Epidemiology and Informatics (IMBEI), Mainz
+  - Research Center for Immunotherapy (FZI), Mainz
+  email: marinif@uni-mainz.de
+- name: Katharina Imkeller
+  affiliation: 
+  - add_yours
+  - second one, if needed
+  email: imkeller@med.uni-frankfurt.de
+date: "`r BiocStyle::doc_date()`"
+package: "`r BiocStyle::pkg_ver('scaeData')`"
 output:
   BiocStyle::html_document:
     toc_float: true
@@ -10,6 +33,8 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{scaeData User Guide}
   %\VignetteEncoding[utf8]{inputenc}
+  %\VignettePackage{scaeData}
+  %\VignetteKeywords{ExperimentHub, ExperimentData, Homo_sapiens_Data, SingleCellData}
 ---
 
 # scaeData
@@ -22,7 +47,7 @@ vignette: >
 
 The raw FASTQs for all three datasets were sourced from publicly accessible datasets provided by [10x Genomics](https://www.10xgenomics.com/datasets).
 
-Upon downloading, [scIGD](https://github.com/AGImkeller/scIGD) Snakemake workflow was utilized to perform HLA allele-typing processes and generate allele-specific quantification from scRNA-seq data using donor-specific references.
+After downloading the raw data, the [scIGD](https://github.com/AGImkeller/scIGD) Snakemake workflow was utilized to perform HLA allele-typing processes and generate allele-specific quantification from scRNA-seq data using donor-specific references.
 
 # Quick Start
 
@@ -48,13 +73,10 @@ devtools::install_github("AGImkeller/scaeData", build_vignettes = TRUE)
 
 # Usage
 
-The datasets within `scaeData` are accessible using the `scaeDataGet` function:
+The datasets within `scaeData` are accessible using the `scaeDataGet()` function:
 
 ```{r libraries, include=TRUE}
-suppressPackageStartupMessages({
-  library(scaeData)
-  # library(SingleCellAlleleExperiment)
-})
+library("scaeData")
 ```
 
 ```{r}
@@ -65,7 +87,7 @@ pbmc_20k <- scaeDataGet("pbmc_20k")
 pbmc_20k
 ```
 
-For example, we can view pbmc 20k:
+For example, we can view `pbmc_20k`:
 
 ```{r}
 cells.dir <- file.path(pbmc_20k$dir, pbmc_20k$barcodes)
