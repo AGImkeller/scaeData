@@ -83,7 +83,7 @@ head(mat)
 
 A `SingleCellAlleleExperiment` object, `scae` for short, can be generated using the `read_allele_counts()` function retrieved from the `SingleCellAlleleExperiment` package.
 
-A lookup table corresponding to each dataset, facilitating the creation of relevant additional data layers during object generation, can be downloaded from the [GitHub repo] (https://github.com/AGImkeller/scaeData/tree/main/inst/extdata):
+A lookup table corresponding to each dataset, facilitating the creation of relevant additional data layers during object generation, can be downloaded from the [GitHub repo] (https://github.com/AGImkeller/scaeData/tree/devel/inst/extdata):
 
 ```{r, eval = FALSE}
 scae_20k <- read_allele_counts(pbmc_20k$dir,
