@@ -194,7 +194,7 @@ demo_dir_file <- function(ehub_dir, dir = TRUE){
 #' Build output list per dataset
 #'
 #' @description
-#' Internal function used by `scae_data()` to build a list containing the file path
+#' Internal function used by `scaeDataGet()` to build a list containing the file path
 #'
 #' @param bc_dir character string containing full path to barcode file
 #' @param feature_dir character string containing full path to feature file
@@ -230,15 +230,15 @@ ehub_out <- function(bc_dir, feature_dir, mtx_dir){
 #' @examples
 #'
 #' if (interactive()) {
-#'     scae_data_5k <- scae_data(dataset = "pbmc_5k")
+#'     scae_data_5k <- scaeDataGet(dataset = "pbmc_5k")
 #'     scae_data_5k
 #' }
 #'
-scae_data <- function(dataset = c("pbmc_5k", "pbmc_10k", "pbmc_20k")){
+scaeDataGet <- function(dataset = c("pbmc_5k", "pbmc_10k", "pbmc_20k")){
   data_loc <- switch(dataset,
                      "pbmc_5k"  = ehub_out(get_barcodes_5k(), get_features_5k(), get_counts_5k()),
                      "pbmc_10k" = ehub_out(get_barcodes_10k(), get_features_10k(), get_counts_10k()),
                      "pbmc_20k" = ehub_out(get_barcodes_20k(), get_features_20k(), get_counts_20k()),
-                     print(message("The dataset is unavailable. Please check for any typos.")))
+                     message("The dataset is unavailable. Please check for any typos."))
   return(data_loc)
 }

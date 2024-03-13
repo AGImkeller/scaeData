@@ -1,0 +1,93 @@
+---
+title: "scaeData User Guide"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output:
+  BiocStyle::html_document:
+    toc_float: true
+    fig_width: 8
+    fig_height: 6
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{scaeData User Guide}
+  %\VignetteEncoding[utf8]{inputenc}
+---
+
+# scaeData
+
+`scaeData` is a complementary package to the Bioconductor package `SingleCellAlleleExperiment`. It contains three datasets to be used when testing functions in `SingleCellAlleleExperiment`. These are: 
+
+- 5k PBMCs of a healthy donor, 3' v3 chemistry
+- 10k PBMCs of a healthy donor, 3' v3 chemistry
+- 20k PBMCs of a healthy donor, 3' v3 chemistry
+
+The raw FASTQs for all three datasets were sourced from publicly accessible datasets provided by [10x Genomics](https://www.10xgenomics.com/datasets).
+
+Upon downloading, [scIGD](https://github.com/AGImkeller/scIGD) Snakemake workflow was utilized to generate allele-specific quantification from scRNA-seq data using donor-specific references.
+
+# Quick Start
+
+## Installation
+
+From Bioconductor:
+
+```{r, eval=FALSE}
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("scaeData")
+```
+
+Alternatively, a development version is available on GitHub and can be installed via:
+
+```{r, eval=FALSE}
+if (!require("devtools", quietly = TRUE))
+    install.packages("devtools")
+
+devtools::install_github("AGImkeller/scaeData", build_vignettes = TRUE)
+```
+
+# Usage
+
+The datasets within `scaeData` are accessible using the `scaeDataGet` function:
+
+```{r libraries, include=TRUE}
+suppressPackageStartupMessages({
+  library(scaeData)
+  # library(SingleCellAlleleExperiment)
+})
+```
+
+```{r}
+pbmc_5k <- scaeDataGet("pbmc_5k")
+pbmc_10k <- scaeDataGet("pbmc_10k")
+pbmc_20k <- scaeDataGet("pbmc_20k")
+
+pbmc_20k
+```
+
+```{r}
+# TODO chunks for "showing the data a bit more"
+```
+
+
+A `SingleCellAlleleExperiment` object, `scae` for short, can be generated using the `read_allele_counts()` function:
+
+```{r, eval = FALSE}
+scae_20k <- read_allele_counts(pbmc_20k$dir,
+                               sample_names = "example_data",
+                               filter = "yes",
+                               exp_type = "WTA",
+                               lookup_file = "lookup_table_HLA_only.csv",
+                               barcode_file = pbmc_20k$barcodes,
+                               gene_file = pbmc_20k$features,
+                               matrix_file = pbmc_20k$matrix,
+                               verbose = TRUE)
+
+scae_20k
+```
+
+# Session info {-}
+
+```{r sessionInfo}
+sessionInfo()
+```
