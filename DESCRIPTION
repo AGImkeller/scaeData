@@ -1,7 +1,7 @@
 Package: scaeData
 Type: Package
 Title: Data Package for SingleCellAlleleExperiment
-Version: 0.99.1
+Version: 0.99.2
 Date: 2024-15-01
 Authors@R: 
     c(
