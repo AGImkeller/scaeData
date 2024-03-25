@@ -23,6 +23,7 @@ Imports: ExperimentHub
 Suggests: knitr,
           rmarkdown,
           markdown,
+          Matrix,
           BiocStyle
 biocViews: ExperimentHub, ExperimentData, Homo_sapiens_Data, SingleCellData
 License: MIT + file LICENSE
