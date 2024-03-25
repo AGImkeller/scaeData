@@ -116,10 +116,10 @@ A lookup table corresponding to each dataset, facilitating the creation of relev
 ```{r, eval = FALSE}
 lookup <- read.csv(system.file("extdata", "pbmc_20k_lookup_table.csv", package="scaeData"))
 
+library("SingleCellAlleleExperiment")
 scae_20k <- read_allele_counts(pbmc_20k$dir,
                                sample_names = "example_data",
-                               filter = "yes",
-                               exp_type = "WTA",
+                               filter_mode = "yes",
                                lookup_file = lookup,
                                barcode_file = pbmc_20k$barcodes,
                                gene_file = pbmc_20k$features,
@@ -128,6 +128,8 @@ scae_20k <- read_allele_counts(pbmc_20k$dir,
 
 scae_20k
 ```
+
+Please refer to the vignette and documentation of `SingleCellAlleleExperiment` to further work with this kind of data container.
 
 # Session info {-}
 
