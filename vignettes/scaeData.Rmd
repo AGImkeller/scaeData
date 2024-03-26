@@ -113,7 +113,7 @@ A `SingleCellAlleleExperiment` object, `scae` for short, can be generated using 
 
 A lookup table corresponding to each dataset, facilitating the creation of relevant additional data layers during object generation, can be accessed from the package's extdata:
 
-```{r, eval = FALSE}
+```{r}
 lookup <- read.csv(system.file("extdata", "pbmc_20k_lookup_table.csv", package="scaeData"))
 
 library("SingleCellAlleleExperiment")
