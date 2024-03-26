@@ -82,15 +82,18 @@ The datasets within `scaeData` are accessible using the `scaeDataGet()` function
 library("scaeData")
 ```
 
-```{r}
+```{r, eval = FALSE}
 pbmc_5k <- scaeDataGet("pbmc_5k")
 pbmc_10k <- scaeDataGet("pbmc_10k")
+```
+
+For example, we can view `pbmc_20k`:
+
+```{r}
 pbmc_20k <- scaeDataGet("pbmc_20k")
 
 pbmc_20k
 ```
-
-For example, we can view `pbmc_20k`:
 
 ```{r}
 cells.dir <- file.path(pbmc_20k$dir, pbmc_20k$barcodes)
@@ -108,14 +111,16 @@ head(mat)
 
 A `SingleCellAlleleExperiment` object, `scae` for short, can be generated using the `read_allele_counts()` function retrieved from the `SingleCellAlleleExperiment` package.
 
-A lookup table corresponding to each dataset, facilitating the creation of relevant additional data layers during object generation, can be downloaded from the [GitHub repo] (https://github.com/AGImkeller/scaeData/tree/devel/inst/extdata):
+A lookup table corresponding to each dataset, facilitating the creation of relevant additional data layers during object generation, can be accessed from the package's extdata:
 
-```{r, eval = FALSE}
+```{r}
+lookup <- read.csv(system.file("extdata", "pbmc_20k_lookup_table.csv", package="scaeData"))
+
+library("SingleCellAlleleExperiment")
 scae_20k <- read_allele_counts(pbmc_20k$dir,
                                sample_names = "example_data",
-                               filter = "yes",
-                               exp_type = "WTA",
-                               lookup_file = "pbmc_20k_lookup_table.csv",
+                               filter_mode = "yes",
+                               lookup_file = lookup,
                                barcode_file = pbmc_20k$barcodes,
                                gene_file = pbmc_20k$features,
                                matrix_file = pbmc_20k$matrix,
@@ -123,6 +128,8 @@ scae_20k <- read_allele_counts(pbmc_20k$dir,
 
 scae_20k
 ```
+
+Please refer to the vignette and documentation of `SingleCellAlleleExperiment` to further work with this kind of data container.
 
 # Session info {-}
 

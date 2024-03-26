@@ -1,7 +1,7 @@
 Package: scaeData
 Type: Package
 Title: Data Package for SingleCellAlleleExperiment
-Version: 0.99.2
+Version: 0.99.3
 Date: 2024-15-01
 Authors@R: 
     c(
@@ -15,15 +15,17 @@ Authors@R:
            comment = c(ORCID = "0000-0002-5177-0852"))
     )
 Description: Contains default datasets used by the Bioconductor package SingleCellAlleleExperiment.
-              The raw FASTQ files were sourced from publicly accessible datasets provided by 10x Genomics.
-              Subsequently, our scIGD snakemake workflow was employed to process these FASTQ files.
-              The resulting output from scIGD constitutes to the contents of this data package.
+    The raw FASTQ files were sourced from publicly accessible datasets provided by 10x Genomics.
+    Subsequently, our scIGD snakemake workflow was employed to process these FASTQ files.
+    The resulting output from scIGD constitutes to the contents of this data package.
 Depends: R (>= 4.3.0)
 Imports: ExperimentHub
 Suggests: knitr,
-          rmarkdown,
-          markdown,
-          BiocStyle
+    rmarkdown,
+    markdown,
+    SingleCellAlleleExperiment,
+    Matrix,
+    BiocStyle
 biocViews: ExperimentHub, ExperimentData, Homo_sapiens_Data, SingleCellData
 License: MIT + file LICENSE
 VignetteBuilder: knitr
